@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐĂNG KÝ XÉT TUYỂN ĐẠI HỌC ĐÔNG Á</title>
+    <meta name="description" content="Đăng ký xét tuyển đại học Đông Á">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+      --green-900: #0b5b2f;
+      --green-700: #128341;
+      --green-500: #1ba04f;
+      --orange-500: #E96440;
+      --cream: #fffdf6;
+      --gold: #f8d154;
+      --red: #d0332d;
+      --ink: #1d2a22;
+      --muted: #e9f2ea;
+      --card: #ffffff;
+      --shadow: 0 14px 36px rgba(11, 91, 47, 0.16);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      margin: 0;
+      font-family: "Open Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 6%, rgba(248, 209, 84, 0.24), transparent 22%),
+        radial-gradient(circle at 90% 10%, rgba(27, 160, 79, 0.16), transparent 20%),
+        linear-gradient(180deg, #f8fff8 0%, #fefdf8 100%);
+      line-height: 1.55;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.25;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    li {
+      margin: 0.35rem 0;
+      text-decoration: none;
+    }
+
+    ul li::marker {
+      color: var(--green-700);
+      font-weight: 700;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      /* background: rgba(11, 91, 47, 0.92); */
+      background: #FFFFFF;
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+    }
+
+    .banner-xet-tuyen {
+      width: 100%;
+      height: auto;
+    }
+
+    .form-dkxt {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-blocks {
+      padding: 48px 0;
+      background: radial-gradient(circle at 25% 20%, rgba(255, 255, 255, 0.55), transparent 65%),
+        linear-gradient(90deg, #ffbf23 0%, #ff8c12 100%);
+    }
+
+    .info-blocks .container {
+      display: grid;
+      /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .info-card-left, .info-card-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .info-card-left h2, .info-card-right h2 {
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+      color: var(--green-900);
+    }
+
+    .info-card-left ul {
+      padding: 0;
+      margin: 0 0 24px 0;
+      list-style: none;
+    }
+
+    .numbered-list {
+      counter-reset: numbered;
+      padding-left: 0;
+    }
+
+    .numbered-list li {
+      counter-increment: numbered;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .numbered-list li::before {
+      content: counter(numbered) ".";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--green-700);
+      font-weight: 800;
+    }
+
+    .info-card-left li {
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: rgba(30, 30, 30, 0.88);
+      text-align: justify;
+    }
+
+    .info-card-left .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 10px;
+      border: 0;
+      background: linear-gradient(90deg, #ff7a1f 0%, #ff4a0b 100%);
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 150ms ease, box-shadow 150ms ease;
+      align-self: center;
+      margin-top: auto;
+    }
+
+    .info-card-right {
+      /* gap: 14px; */
+    }
+
+    .info-card-right span {
+      display: inline-block;
+      margin-left: 30px;
+      margin-top: 10px;
+      font-weight: 600;
+      color: rgba(30, 30, 30, 0.88);
+      /* transform: translateY(-15px); */
+    }
+
+    .info-card-right h2 {
+      margin-bottom: 0;
+    }
+
+    .info-card-right .thoi-gian-xet-tuyen {
+      margin-top: 24px;
+    }
+
+    .info-card-right ul {
+      margin-top: 8px;
+      margin-left: 10px;
+      padding-left: 20px;
+      /* transform: translateY(-15px); */
+    }
+
+    .info-card-right .info-divider {
+      height: 2px;
+      background: var(--green-900);
+      border-radius: 999px;
+      margin: 12px 0;
+    }
+    
+    .info-card-right li::before{
+      color: rgba(30, 30, 30, 0.88);
+    }
+
+    .info-card-right li {
+      margin-bottom: 8px;
+    }
+
+    .info-card-right .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 18px;
+      border-radius: 10px;
+      border: 0;
+      background: linear-gradient(90deg, #ff7a1f 0%, #ff4a0b 100%);
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 150ms ease, box-shadow 150ms ease, filter 150ms ease;
+      align-self: center;
+      margin-top: auto;
+      box-shadow: 0 10px 24px rgba(255, 80, 0, 0.2);
+    }
+
+    .info-card-left .btn:hover,
+    .info-card-right .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(255, 80, 0, 0.28);
+      filter: brightness(1.05);
+    }
+
+    .hero-highlight {
+      margin-top: 18px;
+      margin-bottom: 18px;;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+      line-height: 1.15;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--green-900);
+      text-shadow: 0 6px 16px rgba(11, 91, 47, 0.2);
+    }
+
+    .major-blocks {
+      padding: 56px 0 72px;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(248, 209, 84, 0.2), transparent 40%),
+        radial-gradient(circle at 10% 30%, rgba(27, 160, 79, 0.12), transparent 40%);
+    }
+
+    .major-title {
+      text-align: center;
+      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+      color: var(--green-900);
+      margin-bottom: 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .major-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 1024px) {
+      .major-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .major-card--1 {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .major-card--2 {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .major-card--3 {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .major-card--4 {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      .major-stack {
+        grid-column: 3;
+        grid-row: 1;
+      }
+
+      .major-card--7 {
+        grid-column: 3;
+        grid-row: 2;
+      }
+    }
+
+    .major-card {
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      border: 1px solid rgba(17, 69, 38, 0.08);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .major-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .major-card--5 {
+      order: 1;
+    }
+
+    .major-card--6 {
+      order: 2;
+    }
+
+    .major-media {
+      height: 130px;
+      background: linear-gradient(135deg, rgba(27, 160, 79, 0.18), rgba(248, 209, 84, 0.3));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .major-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .major-body {
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .major-tag {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: var(--green-700);
+    }
+
+    .major-name {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--orange-500);
+    }
+
+    .major-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #0fb257 0%, #0c8d45 100%);
+      color: white;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      box-shadow: 0 8px 18px rgba(15, 178, 87, 0.28);
+    }
+
+    .major-list {
+      list-style: disc;
+      padding: 0;
+      margin: 0;
+      padding-left: 18px;
+      border-top: 1px dashed rgba(11, 91, 47, 0.18);
+      padding-top: 10px;
+      color: rgba(30, 30, 30, 0.9);
+      font-size: 0.92rem;
+      display: grid;
+      gap: 8px;
+    
+    }
+
+    .major-list li {
+      margin: 0;
+      font-weight: 600;
+      color: rgba(29, 42, 34, 0.9);
+      line-height: 1.5;
+      letter-spacing: 0.1px;
+    }
+
+    .major-list li::marker {
+      color: var(--green-700);
+      font-weight: 700;
+    }
+
+    .major-list li a {
+      color: rgba(29, 42, 34, 0.9);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    .major-list li a:hover {
+      color: var(--orange-500);
+    }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <!-- <div class="container topbar-inner">
+            <img class="logo-brand" src="img/logo-lp-hoc-bong.png" alt="logo-brand">
+            <img class="banner-xet-tuyen" src="img/dang-ky-xet-tuyen-2026-uda-banner.jpg" alt="banner-xet-tuyen">
+        </div> -->
+    </header>
+
+    <section class="hero">
+        <img class="banner-xet-tuyen" src="img/dang-ky-xet-tuyen-2026-uda-banner.jpg" alt="banner-xet-tuyen">
+
+        <div class="container hero-wrap">
+            <div class="hero-highlight">ĐĂNG KÝ XÉT TUYỂN ĐẠI HỌC ĐÔNG Á</div>
+        </div>
+    </section>
+
+    <section class="info-blocks">
+      <div class="container">
+        <div class="info-card-left">
+          <h2>CÁC PHƯƠNG THỨC XÉT TUYỂN ĐẠI HỌC CHÍNH QUY 2026</h2>
+          <ul class="numbered-list">
+            <li>Xét tuyển kết quả kỳ thi Tốt nghiệp THPT</li>
+            <li>Xét tuyển dựa trên kết quả học tập các môn học cấp THPT</li>
+            <li>Xét tuyển sử dụng KQ kỳ thi Đánh giá năng lực do Đại học Quốc gia TP.HCM tổ chức năm 2026</li>
+            <li>Xét tuyển sử dụng kết quả đánh giá chứng chỉ năng lực ngoại ngữ Quốc tế hoặc tương đương trở lên (Trong thời hạn 2 năm tính đến thời điểm thông báo thu hồ sơ) kết hợp điểm môn thi tốt nghiệp THPT năm 2026</li>
+            <li>Xét tuyển thí sinh tốt nghiệp THPT nước ngoài áp dụng cho các ngành Y khoa và Dược</li>
+          </ul>
+          <a class="btn" href="https://donga.edu.vn/tuyensinh/ts-chi-tiet/dai-hoc-dong-a-thong-bao-tuyen-sinh-bac-dai-hoc-chinh-quy-nam-2026-42971" target="_blank" rel="noopener noreferrer">XEM THÊM THÔNG TIN TUYỂN SINH</a>
+        </div>
+
+        <div class="info-card-right">
+          <h2>THỜI GIAN NHẬN HỒ SƠ</h2>
+          <!-- <span>Từ tháng 12/2025</span> -->
+           <ul>
+            <li><strong>Từ tháng 12/2025</strong></li>
+           </ul>
+          <div class="info-divider"></div>
+          <h2 class="thoi-gian-xet-tuyen">XÉT TUYỂN & NHẬP HỌC</h2>
+          <ul>
+            <li><strong>Đợt 1</strong> – Trước 15/7/2026</li>
+            <li><strong>Đợt 2</strong> – Trước 15/8/2026</li>
+            <li><strong>Đợt 3</strong> – Trước 30/8/2026</li>
+          </ul>
+          <div class="info-divider"></div>
+          <a class="btn" href="https://xts.donga.edu.vn/dkhocbong/register" target="_blank" rel="noopener noreferrer">ĐĂNG KÝ XÉT TUYỂN NGAY</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="major-blocks">
+      <div class="container">
+        <h2 class="major-title">UDA CÓ 7 KHỐI NGÀNH VỚI 41 NGÀNH ĐÀO TẠO</h2>
+        <div class="major-grid">
+
+          <article class="major-card major-card--1">
+            <div class="major-media">
+              <img src="img/khoi-nganh-2.jpg" alt="Khối ngành Kinh doanh - Quản lý">
+            </div>
+            <div class="major-body">
+              <div class="major-name">Kinh doanh - Quản lý</div>
+              <span class="major-badge">11 ngành đào tạo</span>
+              <ul class="major-list">
+                <li><a href="https://kinhte.donga.edu.vn/chuong-trinh-dao-tao/Quan-tri-kinh-doanh" target="_blank" rel="noopener noreferrer">Quản trị Kinh doanh</a></li>
+                <li><a href="https://marketing.donga.edu.vn/Nganh-dao-tao/Marketing" target="_blank" rel="noopener noreferrer">Marketing</a></li>
+                <li><a href="https://kinhte.donga.edu.vn/chuong-trinh-dao-tao/Logistics" target="_blank" rel="noopener noreferrer">Logistics và Quản lý chuỗi cung ứng</a></li>
+                <li><a href="https://kinhte.donga.edu.vn/chuong-trinh-dao-tao/thuong-mai-dien-tu" target="_blank" rel="noopener noreferrer">Thương mại điện tử</a></li>
+                <li><a href="https://ketoan.donga.edu.vn/dao-tao-ke-toan" target="_blank" rel="noopener noreferrer">Kế toán</a></li>
+                <li><a href="https://ketoan.donga.edu.vn/tai-chinh-ngan-hang" target="_blank" rel="noopener noreferrer">Tài chính ngân hàng</a></li>
+                <li><a href="https://kinhte.donga.edu.vn/chuong-trinh-dao-tao/kinh-doanh-quoc-te" target="_blank" rel="noopener noreferrer">Kinh doanh quốc tế</a></li>
+                <li><a href="https://marketing.donga.edu.vn/Nganh-dao-tao/Truyen-thong-da-phuong-tien" target="_blank" rel="noopener noreferrer">Truyền thông đa phương tiện</a></li>
+                <li><a href="https://quantri.donga.edu.vn/ctdt/quan-tri-nhan-luc" target="_blank" rel="noopener noreferrer">Quản trị nhân lực</a></li>
+                <li><a href="https://quantri.donga.edu.vn/ctdt/nganh-quan-tri-van-phong" target="_blank" rel="noopener noreferrer">Quản trị văn phòng</a></li>
+                <li><a href="https://mtud.donga.edu.vn/nganh-dao-tao/thiet-ke-thoi-trang" target="_blank" rel="noopener noreferrer">Thiết kế thời trang</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="major-card major-card--2">
+            <div class="major-media">
+              <img src="img/khoi-nganh-3.jpg" alt="Khối ngành Dịch vụ du lịch - Khách sạn - Nhà hàng">
+            </div>
+            <div class="major-body">
+              <div class="major-name">Du lịch - Nhà hàng - Khách sạn</div>
+              <span class="major-badge">3 ngành đào tạo</span>
+              <ul class="major-list">
+                <li><a href="https://dulich.donga.edu.vn/Quan-tri-dich-vu-du-lich-lu-hanh" target="_blank" rel="noopener noreferrer">Quản trị dịch vụ du lịch và lữ hành</a></li>
+                <li><a href="https://dulich.donga.edu.vn/quan-tri-khach-san" target="_blank" rel="noopener noreferrer">Quản trị khách sạn</a></li>
+                <li><a href="https://dulich.donga.edu.vn/QT-nha-hang-dich-vu-an-uong" target="_blank" rel="noopener noreferrer">Quản trị nhà hàng và dịch vụ ăn uống</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="major-card major-card--3">
+            <div class="major-media">
+              <img src="img/khoi-nganh-4.jpg" alt="Khối ngành Kỹ thuật">
+            </div>
+            <div class="major-body">
+              <div class="major-name">Kỹ thuật</div>
+              <span class="major-badge">13 ngành đào tạo</span>
+              <ul class="major-list">
+                <li><a href="https://oto.donga.edu.vn/o-to" target="_blank" rel="noopener noreferrer">CNKT ô tô</a></li>
+                <li><a href="https://cntt.donga.edu.vn/ctdt/cntt-2025" target="_blank" rel="noopener noreferrer">Công nghệ thông tin</a></li>
+                <li><a href="https://cntt.donga.edu.vn/ctdt/nganh-kythuatmaytinh" target="_blank" rel="noopener noreferrer">Kỹ thuật máy tính</a></li>
+                <li><a href="https://ai.donga.edu.vn/dao-tao/chuong-trinh-dao-tao" target="_blank" rel="noopener noreferrer">Trí tuệ nhân tạo</a></li>
+                <li><a href="https://mtud.donga.edu.vn/nganh-dao-tao/do-hoa" target="_blank" rel="noopener noreferrer">Đồ hoạ</a></li>
+                <li><a href="https://dien.donga.edu.vn/dao-tao-tu-dong-hoa" target="_blank" rel="noopener noreferrer">CNKT điều khiển & tự động hoá</a></li>
+                <li><a href="https://dien.donga.edu.vn/dao-tao-dien-tu" target="_blank" rel="noopener noreferrer">CNKT Điện - Điện tử</a></li>
+                <li><a href="https://xaydung.donga.edu.vn/dao-tao-cnkt-xay-dung" target="_blank" rel="noopener noreferrer">CNKT Xây dựng</a></li>
+                <li><a href="https://oto.donga.edu.vn/ctdt/chuong-trinh-dao-tao-nganh-ky-thuat-co-dien-tu" target="_blank" rel="noopener noreferrer">Kỹ thuật Cơ điện tử</a></li>
+                <li>Kiến trúc</li>
+                <li><a href="https://cnthucpham.donga.edu.vn/chuong-trinh-dao-tao-cong-nghe-thuc-pham" target="_blank" rel="noopener noreferrer">Công nghệ thực phẩm</a></li>
+                <li><a href="https://cnthucpham.donga.edu.vn/chuong-trinh-dao-tao-nong-nghiep-cnc" target="_blank" rel="noopener noreferrer">Nông nghiệp</a></li>
+                <li><a href="https://cnthucpham.donga.edu.vn/chuong-trinh-dao-tao-nganh-thu-y" target="_blank" rel="noopener noreferrer">Thú Y</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="major-card major-card--4">
+            <div class="major-media">
+              <img src="img/khoi-nganh-1.jpg" alt="Khối ngành Ngôn ngữ">
+            </div>
+            <div class="major-body">
+              <div class="major-name">Ngôn ngữ</div>
+              <span class="major-badge">4 ngành đào tạo</span>
+              <ul class="major-list">
+                <li><a href="https://ngonngutrung.donga.edu.vn/chuong-trinh-dao-tao" target="_blank" rel="noopener noreferrer">Ngôn ngữ Trung Quốc</a></li>
+                <li><a href="https://ngoaingu.donga.edu.vn/ngon-ngu-anh-kd" target="_blank" rel="noopener noreferrer">Ngôn ngữ Anh</a></li>
+                <li><a href="https://ngonnguhan.donga.edu.vn/chuong-trinh-dao-tao" target="_blank" rel="noopener noreferrer">Ngôn ngữ Hàn Quốc</a></li>
+                <li><a href="https://ngonngunhat.donga.edu.vn/chuong-trinh-dao-tao" target="_blank" rel="noopener noreferrer">Ngôn ngữ Nhật</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="major-stack">
+            <article class="major-card major-card--6">
+            <div class="major-media">
+              <img src="img/khoi-nganh-6.jpg" alt="Khối ngành Luật">
+            </div>
+            <div class="major-body">
+              <div class="major-name">Luật</div>
+              <span class="major-badge">2 ngành đào tạo</span>
+              <ul class="major-list">
+                <li><a href="https://luat.donga.edu.vn/luat" target="_blank" rel="noopener noreferrer">Luật</a></li>
+                <li><a href="https://luat.donga.edu.vn/Chuong-trinh-dao-tao" target="_blank" rel="noopener noreferrer">Luật kinh tế</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="major-card major-card--5">
+            <div class="major-media">
+              <img src="img/khoi-nganh-5.jpg" alt="Khối ngành Sức khỏe">
+            </div>
+            <div class="major-body">
+              <div class="major-name">Sức khỏe</div>
+              <span class="major-badge">6 ngành đào tạo</span>
+              <ul class="major-list">
+                <li><a href="https://y.donga.edu.vn/dao-tao/chuong-trinh-dao-tao" target="_blank" rel="noopener noreferrer">Y Khoa</a></li>
+                <li><a href="https://duoc.donga.edu.vn/chuong-trinh-dao-tao" target="_blank" rel="noopener noreferrer">Dược</a></li>
+                <li><a href="https://dieuduong.donga.edu.vn/chuong-trinh-dao-tao-dieu-duong" target="_blank" rel="noopener noreferrer">Điều dưỡng</a></li>
+                <li><a href="https://dieuduong.donga.edu.vn/nganh-dao-tao/nganh-ky-thuat-phuc-hoi-chuc-nang" target="_blank" rel="noopener noreferrer">Kỹ thuật Phục hồi Chức năng</a></li>
+                <li><a href="https://dieuduong.donga.edu.vn/" target="_blank" rel="noopener noreferrer">Hộ sinh</a></li>
+                <li><a href="https://dinhduong.donga.edu.vn/chuong-trinh-dao-tao-nganh-dinh-duong" target="_blank" rel="noopener noreferrer">Dinh dưỡng</a></li>
+              </ul>
+            </div>
+          </article>
+
+          </div>
+
+          <article class="major-card major-card--7">
+            <div class="major-media">
+              <img src="img/khoi-nganh-7.jpg" alt="Khối ngành Sư phạm">
+            </div>
+            <div class="major-body">
+              <div class="major-name">Sư phạm</div>
+              <span class="major-badge">5 ngành đào tạo</span>
+              <ul class="major-list">
+                <li><a href="#" title="Đang mở">Giáo dục học (Đang mở)</a></li>
+                <li><a href="https://supham.donga.edu.vn/chuong-trinh-dao-tao-tam-ly-hoc" target="_blank" rel="noopener noreferrer">Tâm lý học</a></li>
+                <li><a href="https://supham.donga.edu.vn/thong-tin-chi-tiet/nganh-quan-ly-van-hoa---co-hoi-cho-su-nghiep-thang-hoa-28662" target="_blank" rel="noopener noreferrer">Quản lý văn hoá</a></li>
+                <li><a href="https://supham.donga.edu.vn/chuong-trinh-dao-tao-nganh-van-hoc-ung-dung" target="_blank" rel="noopener noreferrer">Văn học (Ứng dụng)</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
